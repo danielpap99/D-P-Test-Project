@@ -40,4 +40,12 @@ test.describe("Login Functionality", () => {
     await expect(loginPage.errorMessage).toHaveText("Epic sadface: Username is required");
     await expect(inventoryPage.inventory).not.toBeVisible();
   });
+
+    test("Locked out user cannot log in", async ({ loginPage, inventoryPage }) => {
+    await loginPage.login("locked_out_user", "secret_sauce");
+
+    await expect(loginPage.errorMessage).toBeVisible();
+    await expect(loginPage.errorMessage).toHaveText("Epic sadface: Sorry, this user has been locked out.");
+    await expect(inventoryPage.inventory).not.toBeVisible();
+  });
 });
