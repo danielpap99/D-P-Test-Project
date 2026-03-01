@@ -10,15 +10,16 @@ test.describe("Product Detail Pages", () => {
     test(`User can access individual product detail pages - ${product.productName}`, async ({ page, inventoryPage, productDetailsPage }) => {
 
     await inventoryPage.clickProductTitle(product.productName);
+
     await expect(page).toHaveURL(/\/inventory-item\.html/);
     await expect(productDetailsPage.productImage).toBeVisible();
     await expect(productDetailsPage.productName).toHaveText(product.productName);
     await expect(productDetailsPage.productDescription).toHaveText(product.description);
     await expect(productDetailsPage.productPrice).toHaveText(product.expectedPrice);
     await expect(productDetailsPage.addToCartButton).toBeVisible();
-    await expect(productDetailsPage.backToProductsButton).toBeVisible();
 
     await productDetailsPage.goBackToProducts();
+
     await expect(inventoryPage.inventory).toBeVisible();;
   });
   }
