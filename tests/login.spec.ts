@@ -41,7 +41,7 @@ test.describe("Login Functionality", () => {
     await expect(inventoryPage.inventory).not.toBeVisible();
   });
 
-    test("Locked out user cannot log in", async ({ loginPage, inventoryPage }) => {
+  test("Locked out user cannot log in", async ({ loginPage, inventoryPage }) => {
     await loginPage.login("locked_out_user", "secret_sauce");
 
     await expect(loginPage.errorMessage).toBeVisible();
