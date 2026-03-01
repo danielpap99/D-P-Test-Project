@@ -13,7 +13,7 @@ test.describe("Login Functionality", () => {
     await loginPage.login("standard_user", "secret_sauce");
 
     await expect(inventoryPage.inventory).toBeVisible();
-    await expect(inventoryPage.shoppingBasketIcon).toBeVisible();
+    await expect(inventoryPage.shoppingCartIcon).toBeVisible();
     await expect(inventoryPage.sortContainer).toBeVisible();
   });
 

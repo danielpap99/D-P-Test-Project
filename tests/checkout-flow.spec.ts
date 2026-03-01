@@ -9,19 +9,19 @@ test.describe("End-to-end checkout flow", () => {
   for (const product of testData) {
     test(`User can complete full checkout successfully flow with ${product.productName}`, async ({
       inventoryPage,
-      basketPage,
+      cartPage,
       checkoutInformationPage,
       checkoutOverviewPage,
       orderCompletePage
     }) => {
-      await inventoryPage.addProductToBasket(product.productName);
-      await inventoryPage.goToBasket();
+      await inventoryPage.addProductToCart(product.productName);
+      await inventoryPage.goToCart();
 
-      await expect(basketPage.basketItems).toHaveCount(1);
-      await expect(basketPage.basketItemNames.first()).toHaveText(product.productName);
-      await expect(basketPage.basketItemPrices.first()).toHaveText(product.expectedPrice);
+      await expect(cartPage.cartItems).toHaveCount(1);
+      await expect(cartPage.cartItemNames.first()).toHaveText(product.productName);
+      await expect(cartPage.cartItemPrices.first()).toHaveText(product.expectedPrice);
 
-      await basketPage.proceedToCheckout();
+      await cartPage.proceedToCheckout();
 
       await checkoutInformationPage.fillCheckoutInformation("Dan", "P", "1111");
       await checkoutInformationPage.continueToOverview();
@@ -43,7 +43,7 @@ test.describe("End-to-end checkout flow", () => {
       await orderCompletePage.backToProducts();
 
       await expect(inventoryPage.inventory).toBeVisible();
-      await expect(inventoryPage.shoppingBasketIcon).toHaveText("");
+      await expect(inventoryPage.shoppingCartIcon).toHaveText("");
     });
   }
 });
