@@ -1,0 +1,50 @@
+[
+  {
+    "productName": "Sauce Labs Backpack",
+    "description": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.",
+    "expectedPrice": "$29.99",
+    "expectedSubtotal": "Item total: $29.99",
+    "expectedTax": "Tax: $2.40",
+    "expectedTotal": "Total: $32.39"
+  },
+  {
+    "productName": "Sauce Labs Bike Light",
+    "description": "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.",
+    "expectedPrice": "$9.99",
+    "expectedSubtotal": "Item total: $9.99",
+    "expectedTax": "Tax: $0.80",
+    "expectedTotal": "Total: $10.79"
+  },
+  {
+    "productName": "Sauce Labs Bolt T-Shirt",
+    "description": "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.",
+    "expectedPrice": "$15.99",
+    "expectedSubtotal": "Item total: $15.99",
+    "expectedTax": "Tax: $1.28",
+    "expectedTotal": "Total: $17.27"
+  },
+  {
+    "productName": "Sauce Labs Fleece Jacket",
+    "description": "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.",
+    "expectedPrice": "$49.99",
+    "expectedSubtotal": "Item total: $49.99",
+    "expectedTax": "Tax: $4.00",
+    "expectedTotal": "Total: $53.99"
+  },
+  {
+    "productName": "Sauce Labs Onesie",
+    "description": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.",
+    "expectedPrice": "$7.99",
+    "expectedSubtotal": "Item total: $7.99",
+    "expectedTax": "Tax: $0.64",
+    "expectedTotal": "Total: $8.63"
+  },
+  {
+    "productName": "Test.allTheThings() T-Shirt (Red)",
+    "description": "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
+    "expectedPrice": "$15.99",
+    "expectedSubtotal": "Item total: $15.99",
+    "expectedTax": "Tax: $1.28",
+    "expectedTotal": "Total: $17.27"
+  }
+]
